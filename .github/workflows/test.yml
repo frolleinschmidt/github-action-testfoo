@@ -3,9 +3,11 @@ on: [push]
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
     - name: echo a thing
       run: echo "foo thing"
     - name: echo a thing unicode
       run: |
         echo "♥"
+    - name: echo a broken thing
+      run: echo "schargelbarg'
