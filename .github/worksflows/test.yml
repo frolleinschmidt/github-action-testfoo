@@ -1,0 +1,11 @@
+name: Test some stuff
+on: [push]
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps: 
+    - name: echo a thing
+      run: echo "foo thing"
+    - name: echo a thing unicode
+      run: |
+        echo "♥"
