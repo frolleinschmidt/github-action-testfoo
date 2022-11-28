@@ -2,19 +2,19 @@ name: Test some stuff
 on: [push]
 jobs:
     test-encoding-bla:
-    runs-on: ubuntu-latest
-    steps:
-    - name: echo ascii
-      run: echo "foo thing"
-    - name: echo unicode
-      run: |
-        echo "♥"
-    - name: echo broken quotes
-      run: echo "schargelbarg'"
-    - name: echo ok env vars
-      run: |
-        ls
-        pwd
-        $GITHUB_REPOSITORY
-        {{ github.token }}
+        runs-on: ubuntu-latest
+        steps:
+        - name: echo ascii
+          run: echo "foo thing"
+        - name: echo unicode
+          run: |
+            echo "♥"
+        - name: echo broken quotes
+          run: echo "schargelbarg'"
+        - name: echo ok env vars
+          run: |
+            ls
+            pwd
+            $GITHUB_REPOSITORY
+            {{ github.token }}
 
