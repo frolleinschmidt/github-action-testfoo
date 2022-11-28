@@ -10,11 +10,9 @@ jobs:
           run: |
             echo "♥"
         - name: echo broken quotes
-          run: echo "schargelbarg'"
+          run: echo "fixed broken quotes"
         - name: echo ok env vars
           run: |
             ls
             pwd
             $GITHUB_REPOSITORY
-            {{ github.token }}
-
