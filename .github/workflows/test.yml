@@ -1,13 +1,20 @@
 name: Test some stuff
 on: [push]
 jobs:
-  run-shell-command:
+    test-encoding-bla:
     runs-on: ubuntu-latest
     steps:
-    - name: echo a thing
+    - name: echo ascii
       run: echo "foo thing"
-    - name: echo a thing unicode
+    - name: echo unicode
       run: |
         echo "♥"
-    - name: echo a broken thing
-      run: echo "schargelbarg'
+    - name: echo broken quotes
+      run: echo "schargelbarg'"
+    - name: echo ok env vars
+      run: |
+        ls
+        pwd
+        $GITHUB_REPOSITORY
+        {{ github.token }}
+
